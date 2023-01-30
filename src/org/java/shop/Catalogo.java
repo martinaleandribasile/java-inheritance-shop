@@ -6,14 +6,15 @@ public class Catalogo {
 
 	public static void main(String[] args) {
 		 Scanner s= new Scanner(System.in);
-		 Prodotto[] listaProdotti= new Prodotto[10];
+		 int n=10;
+		 Prodotto[] listaProdotti= new Prodotto[n];
 		 String choice="";
 		 String nome;
 		 String marca;
 		 int nElement=0;
 		 double prezzo;
 		 System.out.println("Attenzione questo shop consente di inserire un max di 10 prodotti");
-		 while(!choice.equals("4") || nElement == 10) {
+		 while(!choice.equals("4") || nElement == n) {
 			 System.out.println("Che prodotto vuoi aggiungere? Digita: 1 -> Smartphone 2 -> Televisore 3 -> Cuffie o 4 -> per Uscire");
 			 choice= s.next();
 			 switch (choice) {
