@@ -41,11 +41,7 @@ public class Prodotto {
 		return this.marca;
 	}
 	public void setPrezzo(double prezzo) {
-		if(prezzo>0) {
-			this.prezzo=prezzo;
-		}else {
-			
-		}
+		this.prezzo=prezzo;
 	}
 	public double getPrezzo() {
 		return this.prezzo;
