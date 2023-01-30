@@ -14,7 +14,7 @@ public class Catalogo {
 		 int nElement=0;
 		 double prezzo;
 		 System.out.println("Attenzione questo shop consente di inserire un max di 10 prodotti");
-		 while(!choice.equals("4") || nElement == n) {
+		 while(!choice.equals("4") || nElement <= n) {
 			 System.out.println("Che prodotto vuoi aggiungere? Digita: 1 -> Smartphone 2 -> Televisore 3 -> Cuffie o 4 -> per Uscire");
 			 choice= s.next();
 			 switch (choice) {
