@@ -10,8 +10,10 @@ public class Catalogo {
 		 String choice="";
 		 String nome;
 		 String marca;
+		 int nElement=0;
 		 double prezzo;
-		 while(!choice.equals("4")) {
+		 System.out.println("Attenzione questo shop consente di inserire un max di 10 prodotti");
+		 while(!choice.equals("4") || nElement == 10) {
 			 System.out.println("Che prodotto vuoi aggiungere? Digita: 1 -> Smartphone 2 -> Televisore 3 -> Cuffie o 4 -> per Uscire");
 			 choice= s.next();
 			 switch (choice) {
@@ -28,6 +30,7 @@ public class Catalogo {
                  int memoria = s.nextInt();
                  Smartphone newSmartphone= new Smartphone(nome, marca, prezzo, imei, memoria);
                  listaProdotti[newSmartphone.getID()]= newSmartphone;
+                 nElement++;
                  break;
 			 case "2":
 				 System.out.println("Inserisci nome prodotto");
@@ -45,6 +48,7 @@ public class Catalogo {
                  if(s.next().equals("1")) {smart =true;}else {smart=false;}
                  Televisore newTelevisore = new Televisore(nome, marca, prezzo, altezza, larghezza, smart);
                  listaProdotti[newTelevisore.getID()]= newTelevisore;
+                 nElement++;
                  break;
 			 case "3":
 				 System.out.println("Inserisci nome prodotto");
@@ -59,6 +63,7 @@ public class Catalogo {
                  String tipologia=s.next();
                  Cuffia newCuffia= new Cuffia(nome, marca, prezzo, tipologia, colore);
                  listaProdotti[newCuffia.getID()]= newCuffia;
+                 nElement++;
                  break;
 			 case "4":
 				 System.out.println("Grazie per aver usato in nostro shop!");
