@@ -24,8 +24,11 @@ public class Prodotto {
 		
 		
 	}
+	public static int getItemsNumber() {
+		return itemsNumber;
+	}
 	
-	public int getCodice() {
+	public int getCodice() { 
 		return this.codice;
 	}
 	public void setNome(String nome) {

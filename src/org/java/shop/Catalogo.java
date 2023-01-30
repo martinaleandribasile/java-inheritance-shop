@@ -7,7 +7,6 @@ public class Catalogo {
 	public static void main(String[] args) {
 		 Scanner s= new Scanner(System.in);
 		 Prodotto[] listaProdotti= new Prodotto[10];
-		 int items=0;
 		 String choice="";
 		 String nome;
 		 String marca;
@@ -29,7 +28,6 @@ public class Catalogo {
                  int memoria = s.nextInt();
                  Smartphone newSmartphone= new Smartphone(nome, marca, prezzo, imei, memoria);
                  listaProdotti[newSmartphone.getID()]= newSmartphone;
-                 items++;
                  break;
 			 case "2":
 				 System.out.println("Inserisci nome prodotto");
@@ -47,7 +45,6 @@ public class Catalogo {
                  if(s.next().equals("1")) {smart =true;}else {smart=false;}
                  Televisore newTelevisore = new Televisore(nome, marca, prezzo, altezza, larghezza, smart);
                  listaProdotti[newTelevisore.getID()]= newTelevisore;
-                 items++;
                  break;
 			 case "3":
 				 System.out.println("Inserisci nome prodotto");
@@ -62,7 +59,6 @@ public class Catalogo {
                  String tipologia=s.next();
                  Cuffia newCuffia= new Cuffia(nome, marca, prezzo, tipologia, colore);
                  listaProdotti[newCuffia.getID()]= newCuffia;
-                 items++;
                  break;
 			 case "4":
 				 System.out.println("Grazie per aver usato in nostro shop!");
@@ -74,7 +70,7 @@ public class Catalogo {
 			 
 		 }
 		  System.out.println("Il catalogo:");
-	        for (int i=0;i<items ;i++) {
+	        for (int i=0;i<Prodotto.getItemsNumber() ;i++) {
 	            System.out.println(listaProdotti[i].toString());
 	        }
 		 s.close();
