@@ -73,7 +73,7 @@ public class Catalogo {
 			 }
 			 
 		 }
-		  System.out.println("Ecco il catalogo aggiornato");
+		  System.out.println("Il catalogo:");
 	        for (int i=0;i<items ;i++) {
 	            System.out.println(listaProdotti[i].toString());
 	        }
