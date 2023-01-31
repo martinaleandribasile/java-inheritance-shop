@@ -13,6 +13,7 @@ public class Prodotto {
 	private double iva= 22;
 	int id;
 	private static int itemsNumber=0;
+	private static int capienzaCatalogo=2;
 	
 	public Prodotto( String nome, String marca, double prezzo) {
 		this.codice=r.nextInt(1000);
@@ -26,6 +27,9 @@ public class Prodotto {
 	}
 	public static int getItemsNumber() {
 		return itemsNumber;
+	}
+	public static int getCapienzaCatalogo() {
+		return capienzaCatalogo;
 	}
 	
 	public int getCodice() { 
